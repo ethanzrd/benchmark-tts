@@ -39,7 +39,6 @@ class OpenAISDKBenchmark:
             logger = OpenAISDKBenchmark.logger
 
         synthesis_result = OpenAISDKBenchmark._create_speech(text=text, logger=logger)
-        synthesis_result.response.stream_to_file("openai_benchmark_output.mp3")
         with open("openai_benchmark_output.mp3", "wb") as f:
             is_first_chunk = True
             first_chunk_generation_start = time.time()
